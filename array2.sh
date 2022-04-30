@@ -13,11 +13,11 @@ array=($a $b $c $d $e $f $g $h $i $j)
 
 echo ${array[@]}
 
-sortedarray=$(printf '%s\n' "${array[@]}" | sort -u)
+sortedarray=$(printf '%s\n' "${array[@]}" | sort -n)
 echo $sortedarray
 
-secondlargest=$(printf '%s\n' "${array[@]}" | sort -u | tail -2 | head -1  )
+secondlargest=$(printf '%s\n' "${array[@]}" | sort -n | tail -2 | head -1  )
 echo "$secondlargest is the 2nd largest number"
 
-secondsmallest=$(printf '%s\n' "${array[@]}" | sort -u | head -2 | tail -1 )
+secondsmallest=$(printf '%s\n' "${array[@]}" | sort -n | head -2 | tail -1 )
 echo "$secondsmallest is the 2nd smallest number"
